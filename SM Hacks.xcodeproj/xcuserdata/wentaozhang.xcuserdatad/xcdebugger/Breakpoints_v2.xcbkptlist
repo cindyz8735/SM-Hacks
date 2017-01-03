@@ -88,11 +88,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SM Hacks/ViewControllers/ScheduleViewController.swift"
-            timestampString = "505171857.266703"
+            timestampString = "505174389.258975"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "ScheduleViewController"
             landmarkType = "3">
          </BreakpointContent>

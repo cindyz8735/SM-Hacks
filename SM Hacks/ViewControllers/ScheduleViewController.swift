@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScheduleViewController: UIViewController, UITableViewDataSource {
+class ScheduleViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // arrays/data for schedule
     let saturday = [
@@ -33,6 +33,19 @@ class ScheduleViewController: UIViewController, UITableViewDataSource {
         
     ]
     
+//    let textCellIdentifier = "TextCell"
+//    
+//    let blogSegueIdentifier = "ShowBlogSegue"
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if  segue.identifier == blogSegueIdentifier,
+//            let destination = segue.destinationViewController as? BlogViewController,
+//            let blogIndex = tableView.indexPathForSelectedRow?.row
+//        {
+//            destination.blogName = swiftBlogs[blogIndex]
+//        }
+//    }
+    
     // how many sections in table
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
@@ -51,7 +64,8 @@ class ScheduleViewController: UIViewController, UITableViewDataSource {
     // contents of each cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "subtitleCell")
-        
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
+
         if indexPath.section == 0 {
             var (satName, satTime, satLocation, satNotes) = saturday[indexPath.row]
             cell.textLabel?.text = satName
@@ -63,6 +77,11 @@ class ScheduleViewController: UIViewController, UITableViewDataSource {
             cell.detailTextLabel?.text = sunTime
         }
         return cell
+    }
+    
+    // click for more info
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        
     }
     
     // give section title
