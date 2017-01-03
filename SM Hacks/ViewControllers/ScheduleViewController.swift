@@ -68,7 +68,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource {
     // give section title
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "Saturday, Jan. 14, 2017"
+            return nil
         }
         else {
             return "Sunday, Jan. 15, 2017"
