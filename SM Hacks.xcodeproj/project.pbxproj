@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F0229E191E1B69FC00C6622D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E181E1B69FC00C6622D /* AppDelegate.swift */; };
-		F0229E1B1E1B69FC00C6622D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E1A1E1B69FC00C6622D /* FirstViewController.swift */; };
-		F0229E1D1E1B69FC00C6622D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E1C1E1B69FC00C6622D /* SecondViewController.swift */; };
 		F0229E201E1B69FC00C6622D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0229E1E1E1B69FC00C6622D /* Main.storyboard */; };
 		F0229E221E1B69FC00C6622D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0229E211E1B69FC00C6622D /* Assets.xcassets */; };
 		F0229E251E1B69FC00C6622D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0229E231E1B69FC00C6622D /* LaunchScreen.storyboard */; };
 		F0229E301E1B69FC00C6622D /* SM_HacksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E2F1E1B69FC00C6622D /* SM_HacksTests.swift */; };
 		F0229E3B1E1B69FC00C6622D /* SM_HacksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E3A1E1B69FC00C6622D /* SM_HacksUITests.swift */; };
+		F0229E4D1E1B705400C6622D /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E4C1E1B705300C6622D /* ScheduleViewController.swift */; };
+		F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E4F1E1B707F00C6622D /* HomeViewController.swift */; };
+		F0229E521E1B708F00C6622D /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E511E1B708F00C6622D /* UpdatesViewController.swift */; };
+		F0229E541E1B709700C6622D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E531E1B709700C6622D /* MapViewController.swift */; };
+		F0229E591E1B7FC300C6622D /* anthony.png in Resources */ = {isa = PBXBuildFile; fileRef = F0229E561E1B7FC300C6622D /* anthony.png */; };
+		F0229E5A1E1B7FC300C6622D /* cindy.png in Resources */ = {isa = PBXBuildFile; fileRef = F0229E571E1B7FC300C6622D /* cindy.png */; };
+		F0229E5B1E1B7FC300C6622D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0229E581E1B7FC300C6622D /* logo.png */; };
+		F0229E5D1E1B801600C6622D /* DrawImageMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E5C1E1B801600C6622D /* DrawImageMap.swift */; };
+		F0229E5F1E1B833700C6622D /* Floorplan.png in Resources */ = {isa = PBXBuildFile; fileRef = F0229E5E1E1B833700C6622D /* Floorplan.png */; };
+		F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A2323A1E1C39F7009F6A7B /* TabController.swift */; };
+		F0D682311E1BA20E00F0ADC6 /* MapScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +46,6 @@
 /* Begin PBXFileReference section */
 		F0229E151E1B69FC00C6622D /* SM Hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SM Hacks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0229E181E1B69FC00C6622D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0229E1A1E1B69FC00C6622D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		F0229E1C1E1B69FC00C6622D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		F0229E1F1E1B69FC00C6622D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0229E211E1B69FC00C6622D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0229E241E1B69FC00C6622D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,17 @@
 		F0229E361E1B69FC00C6622D /* SM HacksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SM HacksUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0229E3A1E1B69FC00C6622D /* SM_HacksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SM_HacksUITests.swift; sourceTree = "<group>"; };
 		F0229E3C1E1B69FC00C6622D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0229E4C1E1B705300C6622D /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScheduleViewController.swift; path = ViewControllers/ScheduleViewController.swift; sourceTree = "<group>"; };
+		F0229E4F1E1B707F00C6622D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
+		F0229E511E1B708F00C6622D /* UpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdatesViewController.swift; path = ViewControllers/UpdatesViewController.swift; sourceTree = "<group>"; };
+		F0229E531E1B709700C6622D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
+		F0229E561E1B7FC300C6622D /* anthony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anthony.png; sourceTree = "<group>"; };
+		F0229E571E1B7FC300C6622D /* cindy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cindy.png; sourceTree = "<group>"; };
+		F0229E581E1B7FC300C6622D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		F0229E5C1E1B801600C6622D /* DrawImageMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawImageMap.swift; sourceTree = "<group>"; };
+		F0229E5E1E1B833700C6622D /* Floorplan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Floorplan.png; sourceTree = "<group>"; };
+		F0A2323A1E1C39F7009F6A7B /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabController.swift; path = ViewControllers/TabController.swift; sourceTree = "<group>"; };
+		F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +117,19 @@
 		F0229E171E1B69FC00C6622D /* SM Hacks */ = {
 			isa = PBXGroup;
 			children = (
+				F0229E551E1B7F7600C6622D /* Supporting Files */,
+				F0229E4C1E1B705300C6622D /* ScheduleViewController.swift */,
+				F0229E4F1E1B707F00C6622D /* HomeViewController.swift */,
+				F0229E511E1B708F00C6622D /* UpdatesViewController.swift */,
+				F0229E531E1B709700C6622D /* MapViewController.swift */,
 				F0229E181E1B69FC00C6622D /* AppDelegate.swift */,
-				F0229E1A1E1B69FC00C6622D /* FirstViewController.swift */,
-				F0229E1C1E1B69FC00C6622D /* SecondViewController.swift */,
 				F0229E1E1E1B69FC00C6622D /* Main.storyboard */,
+				F0A2323A1E1C39F7009F6A7B /* TabController.swift */,
+				F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */,
 				F0229E211E1B69FC00C6622D /* Assets.xcassets */,
 				F0229E231E1B69FC00C6622D /* LaunchScreen.storyboard */,
 				F0229E261E1B69FC00C6622D /* Info.plist */,
+				F0229E5C1E1B801600C6622D /* DrawImageMap.swift */,
 			);
 			path = "SM Hacks";
 			sourceTree = "<group>";
@@ -126,6 +150,17 @@
 				F0229E3C1E1B69FC00C6622D /* Info.plist */,
 			);
 			path = "SM HacksUITests";
+			sourceTree = "<group>";
+		};
+		F0229E551E1B7F7600C6622D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F0229E5E1E1B833700C6622D /* Floorplan.png */,
+				F0229E561E1B7FC300C6622D /* anthony.png */,
+				F0229E571E1B7FC300C6622D /* cindy.png */,
+				F0229E581E1B7FC300C6622D /* logo.png */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +231,13 @@
 				TargetAttributes = {
 					F0229E141E1B69FC00C6622D = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = CCU4FRT4QP;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					F0229E2A1E1B69FC00C6622D = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -235,9 +276,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0229E5F1E1B833700C6622D /* Floorplan.png in Resources */,
 				F0229E251E1B69FC00C6622D /* LaunchScreen.storyboard in Resources */,
 				F0229E221E1B69FC00C6622D /* Assets.xcassets in Resources */,
+				F0229E5B1E1B7FC300C6622D /* logo.png in Resources */,
 				F0229E201E1B69FC00C6622D /* Main.storyboard in Resources */,
+				F0229E5A1E1B7FC300C6622D /* cindy.png in Resources */,
+				F0229E591E1B7FC300C6622D /* anthony.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0229E1D1E1B69FC00C6622D /* SecondViewController.swift in Sources */,
+				F0229E5D1E1B801600C6622D /* DrawImageMap.swift in Sources */,
+				F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */,
 				F0229E191E1B69FC00C6622D /* AppDelegate.swift in Sources */,
-				F0229E1B1E1B69FC00C6622D /* FirstViewController.swift in Sources */,
+				F0229E4D1E1B705400C6622D /* ScheduleViewController.swift in Sources */,
+				F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */,
+				F0229E541E1B709700C6622D /* MapViewController.swift in Sources */,
+				F0D682311E1BA20E00F0ADC6 /* MapScrollView.swift in Sources */,
+				F0229E521E1B708F00C6622D /* UpdatesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +464,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CCU4FRT4QP;
 				INFOPLIST_FILE = "SM Hacks/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cindyzhang.SM-Hacks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,7 +478,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CCU4FRT4QP;
 				INFOPLIST_FILE = "SM Hacks/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cindyzhang.SM-Hacks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -507,6 +561,7 @@
 				F0229E411E1B69FC00C6622D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0229E421E1B69FC00C6622D /* Build configuration list for PBXNativeTarget "SM HacksTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +570,7 @@
 				F0229E441E1B69FC00C6622D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F0229E451E1B69FC00C6622D /* Build configuration list for PBXNativeTarget "SM HacksUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +579,7 @@
 				F0229E471E1B69FC00C6622D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
