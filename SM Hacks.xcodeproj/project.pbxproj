@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F0071F761E1CE7E200148A72 /* floor-plan.png in Resources */ = {isa = PBXBuildFile; fileRef = F0071F751E1CE7E200148A72 /* floor-plan.png */; };
 		F0229E191E1B69FC00C6622D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E181E1B69FC00C6622D /* AppDelegate.swift */; };
 		F0229E201E1B69FC00C6622D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0229E1E1E1B69FC00C6622D /* Main.storyboard */; };
 		F0229E221E1B69FC00C6622D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0229E211E1B69FC00C6622D /* Assets.xcassets */; };
@@ -17,12 +18,8 @@
 		F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E4F1E1B707F00C6622D /* HomeViewController.swift */; };
 		F0229E521E1B708F00C6622D /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E511E1B708F00C6622D /* UpdatesViewController.swift */; };
 		F0229E541E1B709700C6622D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E531E1B709700C6622D /* MapViewController.swift */; };
-		F0229E591E1B7FC300C6622D /* anthony.png in Resources */ = {isa = PBXBuildFile; fileRef = F0229E561E1B7FC300C6622D /* anthony.png */; };
-		F0229E5A1E1B7FC300C6622D /* cindy.png in Resources */ = {isa = PBXBuildFile; fileRef = F0229E571E1B7FC300C6622D /* cindy.png */; };
-		F0229E5B1E1B7FC300C6622D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F0229E581E1B7FC300C6622D /* logo.png */; };
-		F0229E5D1E1B801600C6622D /* DrawImageMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E5C1E1B801600C6622D /* DrawImageMap.swift */; };
-		F0229E5F1E1B833700C6622D /* Floorplan.png in Resources */ = {isa = PBXBuildFile; fileRef = F0229E5E1E1B833700C6622D /* Floorplan.png */; };
 		F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A2323A1E1C39F7009F6A7B /* TabController.swift */; };
+		F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */; };
 		F0D682311E1BA20E00F0ADC6 /* MapScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F0071F751E1CE7E200148A72 /* floor-plan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "floor-plan.png"; path = "Assets.xcassets/FloorPlan.imageset/floor-plan.png"; sourceTree = "<group>"; };
 		F0229E151E1B69FC00C6622D /* SM Hacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SM Hacks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0229E181E1B69FC00C6622D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0229E1F1E1B69FC00C6622D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,12 +58,8 @@
 		F0229E4F1E1B707F00C6622D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		F0229E511E1B708F00C6622D /* UpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdatesViewController.swift; path = ViewControllers/UpdatesViewController.swift; sourceTree = "<group>"; };
 		F0229E531E1B709700C6622D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
-		F0229E561E1B7FC300C6622D /* anthony.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anthony.png; sourceTree = "<group>"; };
-		F0229E571E1B7FC300C6622D /* cindy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cindy.png; sourceTree = "<group>"; };
-		F0229E581E1B7FC300C6622D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		F0229E5C1E1B801600C6622D /* DrawImageMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawImageMap.swift; sourceTree = "<group>"; };
-		F0229E5E1E1B833700C6622D /* Floorplan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Floorplan.png; sourceTree = "<group>"; };
 		F0A2323A1E1C39F7009F6A7B /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabController.swift; path = ViewControllers/TabController.swift; sourceTree = "<group>"; };
+		F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScheduleViewController.swift; path = ViewControllers/DetailScheduleViewController.swift; sourceTree = "<group>"; };
 		F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,8 +111,9 @@
 		F0229E171E1B69FC00C6622D /* SM Hacks */ = {
 			isa = PBXGroup;
 			children = (
-				F0229E551E1B7F7600C6622D /* Supporting Files */,
+				F0071F751E1CE7E200148A72 /* floor-plan.png */,
 				F0229E4C1E1B705300C6622D /* ScheduleViewController.swift */,
+				F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */,
 				F0229E4F1E1B707F00C6622D /* HomeViewController.swift */,
 				F0229E511E1B708F00C6622D /* UpdatesViewController.swift */,
 				F0229E531E1B709700C6622D /* MapViewController.swift */,
@@ -129,7 +124,6 @@
 				F0229E211E1B69FC00C6622D /* Assets.xcassets */,
 				F0229E231E1B69FC00C6622D /* LaunchScreen.storyboard */,
 				F0229E261E1B69FC00C6622D /* Info.plist */,
-				F0229E5C1E1B801600C6622D /* DrawImageMap.swift */,
 			);
 			path = "SM Hacks";
 			sourceTree = "<group>";
@@ -150,17 +144,6 @@
 				F0229E3C1E1B69FC00C6622D /* Info.plist */,
 			);
 			path = "SM HacksUITests";
-			sourceTree = "<group>";
-		};
-		F0229E551E1B7F7600C6622D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F0229E5E1E1B833700C6622D /* Floorplan.png */,
-				F0229E561E1B7FC300C6622D /* anthony.png */,
-				F0229E571E1B7FC300C6622D /* cindy.png */,
-				F0229E581E1B7FC300C6622D /* logo.png */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,13 +259,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0229E5F1E1B833700C6622D /* Floorplan.png in Resources */,
 				F0229E251E1B69FC00C6622D /* LaunchScreen.storyboard in Resources */,
 				F0229E221E1B69FC00C6622D /* Assets.xcassets in Resources */,
-				F0229E5B1E1B7FC300C6622D /* logo.png in Resources */,
 				F0229E201E1B69FC00C6622D /* Main.storyboard in Resources */,
-				F0229E5A1E1B7FC300C6622D /* cindy.png in Resources */,
-				F0229E591E1B7FC300C6622D /* anthony.png in Resources */,
+				F0071F761E1CE7E200148A72 /* floor-plan.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0229E5D1E1B801600C6622D /* DrawImageMap.swift in Sources */,
+				F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */,
 				F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */,
 				F0229E191E1B69FC00C6622D /* AppDelegate.swift in Sources */,
 				F0229E4D1E1B705400C6622D /* ScheduleViewController.swift in Sources */,

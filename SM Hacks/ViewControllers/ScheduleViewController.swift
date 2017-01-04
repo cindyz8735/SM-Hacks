@@ -30,21 +30,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         ("Hacking Ends", "12 PM", "", ""),
         ("Judging and Demos", "12:30 PM to 1:15 PM", "Lobby", ""),
         ("Closing Ceremony", "1:45 PM", "Auditorium", "")
-        
     ]
-    
-//    let textCellIdentifier = "TextCell"
-//    
-//    let blogSegueIdentifier = "ShowBlogSegue"
-//    
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if  segue.identifier == blogSegueIdentifier,
-//            let destination = segue.destinationViewController as? BlogViewController,
-//            let blogIndex = tableView.indexPathForSelectedRow?.row
-//        {
-//            destination.blogName = swiftBlogs[blogIndex]
-//        }
-//    }
     
     // how many sections in table
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -64,7 +50,6 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     // contents of each cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "subtitleCell")
-        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
 
         if indexPath.section == 0 {
             var (satName, satTime, satLocation, satNotes) = saturday[indexPath.row]
@@ -76,12 +61,8 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.textLabel?.text = sunName
             cell.detailTextLabel?.text = sunTime
         }
-        return cell
-    }
-    
-    // click for more info
-    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         
+        return cell
     }
     
     // give section title
@@ -93,6 +74,46 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
             return "Sunday, Jan. 15, 2017"
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "ShowDetailSchedule" {
+                let upcoming = segue.destination as? DetailScheduleViewController
+                var (sunName, sunTime, sunLocation, sunNotes) = sunday[indexPath.row]
+                upcoming?.eventName = sunName
+                upcoming?.eventTime = sunTime
+                upcoming?.eventLocation = sunLocation
+                upcoming?.eventDescription = sunNotes
+            }
+        }
+//        self.performSegue(withIdentifier: "ShowDetailSchedule", sender: self)
+
+    }
+    
+//    @IBOutlet weak var tableView: UITableView!
+//    
+//    func prepareForSegue(segue: UIStoryboardSegue, sender:
+//        AnyObject?)
+//    {
+//        if (segue.identifier == "ShowDetailSchedule")
+//        {
+//            // upcoming is set to NewViewController (.swift)
+//            var upcoming: DetailScheduleViewController = segue.destination as! DetailScheduleViewController
+//            // indexPath is set to the path that was tapped
+//            let indexPath = self.tableView.indexPathForSelectedRow!
+//            // titleString is set to the title at the row in the objects array.
+//            // let titleString = self.saturday[indexPath.row]
+//            // the titleStringViaSegue property of NewViewController is set.
+//            var (sunName, sunTime, sunLocation, sunNotes) = sunday[indexPath.row]
+//            upcoming.eventName = sunName
+//            upcoming.eventTime = sunTime
+//            upcoming.eventLocation = sunLocation
+//            upcoming.eventDescription = sunNotes
+//            
+//            self.tableView.deselectRow(at: indexPath, animated: true)
+//        }
+//    }
+
 
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -104,16 +125,5 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
