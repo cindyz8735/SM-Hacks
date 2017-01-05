@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
-    var pushBody = [String]()
+    // var pushBody = [String]()
     
     
     func application(_ application: UIApplication,
@@ -47,10 +47,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.registerForRemoteNotifications()
         
         // [END register_for_notifications]
+        
         FIRApp.configure()
         
-        
         // Add observer for InstanceID token refresh callback.
+        
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.tokenRefreshNotification),
                                                name: .firInstanceIDTokenRefresh,
