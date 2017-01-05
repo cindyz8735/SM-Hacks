@@ -1,0 +1,6 @@
+framework module Pods_SM_HacksUITests {
+  umbrella header "Pods-SM HacksUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
