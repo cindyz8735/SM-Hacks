@@ -8,19 +8,25 @@
 
 import UIKit
 
+var updatesArray = [String]()
+var newUpdate : String = String()
+
 class UpdatesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       
+        // add push updates to array
+        updatesArray.append(newUpdate)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     // how many sections in table
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,19 +35,17 @@ class UpdatesViewController: UIViewController {
     
     // return int = how many rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return updatesArray.count
     }
     
-//    // contents of each cell
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "subtitleCell")
-//        
-//        var (updateTitle, updateBody) = updateArray[indexPath.row]
-//        cell.textLabel?.text = updateTitle
-//        cell.detailTextLabel?.text = updateBody
-//        
-//        return cell
-//    }
+    // contents of each cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "defaultCell")
+        
+        var updateText = updatesArray[indexPath.row]
+        cell.textLabel?.text = updateText
+        return cell
+    }
     
     // give section title
     /*

@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
-    var pushTitles = [String]()
     var pushBody = [String]()
     
     
@@ -177,6 +176,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
             print("Message ID: \(messageID)")
         }
         
+//        newUpdate = userInfo.description
+        
         // Print full message.
         print(userInfo)
         
@@ -192,3 +193,4 @@ extension AppDelegate : FIRMessagingDelegate {
     }
 }
 // [END ios_10_data_message_handling]
+
