@@ -25,7 +25,6 @@
 		F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */; };
 		F0D682311E1BA20E00F0ADC6 /* MapScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */; };
 		F0EF02761E1DA2CD00C5CFBA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */; };
-		F0F08D801E1E4022002B589D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F08D7F1E1E4022002B589D /* ViewController.swift */; };
 		F0F08D821E1E409D002B589D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F08D811E1E409D002B589D /* Alamofire.framework */; };
 		F0F9553F1E1DC0BE00DFB739 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0F9553E1E1DC0BE00DFB739 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -78,7 +77,6 @@
 		F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScrollView.swift; sourceTree = "<group>"; };
 		F0EF02731E1DA11400C5CFBA /* SM Hacks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SM Hacks.entitlements"; sourceTree = "<group>"; };
 		F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
-		F0F08D7F1E1E4022002B589D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
 		F0F08D811E1E409D002B589D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/SM_Hacks-ddhstrwefdjnhzbsygdqjtuzktlm/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		F0F9553E1E1DC0BE00DFB739 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCA86D849A700800E3914017 /* Pods-SM HacksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SM HacksTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SM HacksTests/Pods-SM HacksTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 				F0229E531E1B709700C6622D /* MapViewController.swift */,
 				F0229E181E1B69FC00C6622D /* AppDelegate.swift */,
 				F0229E1E1E1B69FC00C6622D /* Main.storyboard */,
-				F0F08D7F1E1E4022002B589D /* ViewController.swift */,
 				F0A2323A1E1C39F7009F6A7B /* TabController.swift */,
 				F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */,
 				F0229E211E1B69FC00C6622D /* Assets.xcassets */,
@@ -497,7 +494,6 @@
 				F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */,
 				F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */,
 				F0229E191E1B69FC00C6622D /* AppDelegate.swift in Sources */,
-				F0F08D801E1E4022002B589D /* ViewController.swift in Sources */,
 				F0229E4D1E1B705400C6622D /* ScheduleViewController.swift in Sources */,
 				F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */,
 				F0229E541E1B709700C6622D /* MapViewController.swift in Sources */,
