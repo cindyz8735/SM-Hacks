@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [END register_for_notifications]
         FIRApp.configure()
         
+        
         // Add observer for InstanceID token refresh callback.
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(self.tokenRefreshNotification),
@@ -57,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
     
     // [START receive_message]
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
@@ -100,6 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         connectToFcm()
     }
     // [END refresh_token]
+    
     // [START connect_to_fcm]
     func connectToFcm() {
         // Won't connect since there is no token
@@ -119,9 +122,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     // [END connect_to_fcm]
+    
+    
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         print("Unable to register for remote notifications: \(error.localizedDescription)")
     }
+    
     
     // This function is added here only for debugging purposes, and can be removed if swizzling is enabled.
     // If swizzling is disabled then this function must be implemented so that the APNs token can be paired to
@@ -138,13 +144,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         connectToFcm()
     }
     // [END connect_on_active]
+    
+    
     // [START disconnect_from_fcm]
+    
     func applicationDidEnterBackground(_ application: UIApplication) {
         FIRMessaging.messaging().disconnect()
         print("Disconnected from FCM.")
     }
     // [END disconnect_from_fcm]
+    
+    
+    
 }
+
+
+// iOS 10 ONLY BELOW
 
 // [START ios_10_message_handling]
 @available(iOS 10, *)
@@ -160,7 +175,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
             print("Message ID: \(messageID)")
         }
         
-        // Print full message.
+        // Print full message
         print(userInfo)
         
         // Change this to your preferred presentation option
@@ -171,12 +186,11 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         let userInfo = response.notification.request.content.userInfo
+        
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
-//        newUpdate = userInfo.description
         
         // Print full message.
         print(userInfo)

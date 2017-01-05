@@ -21,6 +21,7 @@
 		F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E4F1E1B707F00C6622D /* HomeViewController.swift */; };
 		F0229E521E1B708F00C6622D /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E511E1B708F00C6622D /* UpdatesViewController.swift */; };
 		F0229E541E1B709700C6622D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E531E1B709700C6622D /* MapViewController.swift */; };
+		F044614E1E1E1BD2003E89FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F044614D1E1E1BD2003E89FA /* ViewController.swift */; };
 		F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A2323A1E1C39F7009F6A7B /* TabController.swift */; };
 		F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */; };
 		F0D682311E1BA20E00F0ADC6 /* MapScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */; };
@@ -71,6 +72,7 @@
 		F0229E4F1E1B707F00C6622D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		F0229E511E1B708F00C6622D /* UpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdatesViewController.swift; path = ViewControllers/UpdatesViewController.swift; sourceTree = "<group>"; };
 		F0229E531E1B709700C6622D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
+		F044614D1E1E1BD2003E89FA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
 		F0A2323A1E1C39F7009F6A7B /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabController.swift; path = ViewControllers/TabController.swift; sourceTree = "<group>"; };
 		F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScheduleViewController.swift; path = ViewControllers/DetailScheduleViewController.swift; sourceTree = "<group>"; };
 		F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScrollView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				F0229E531E1B709700C6622D /* MapViewController.swift */,
 				F0229E181E1B69FC00C6622D /* AppDelegate.swift */,
 				F0229E1E1E1B69FC00C6622D /* Main.storyboard */,
+				F044614D1E1E1BD2003E89FA /* ViewController.swift */,
 				F0A2323A1E1C39F7009F6A7B /* TabController.swift */,
 				F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */,
 				F0229E211E1B69FC00C6622D /* Assets.xcassets */,
@@ -490,6 +493,7 @@
 				F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */,
 				F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */,
 				F0229E191E1B69FC00C6622D /* AppDelegate.swift in Sources */,
+				F044614E1E1E1BD2003E89FA /* ViewController.swift in Sources */,
 				F0229E4D1E1B705400C6622D /* ScheduleViewController.swift in Sources */,
 				F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */,
 				F0229E541E1B709700C6622D /* MapViewController.swift in Sources */,

@@ -356,6 +356,37 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="IFl-Zw-lax">
+            <objects>
+                <viewController id="gBj-d2-lpU" customClass="ViewController" customModule="SM_Hacks" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UVw-b8-omu"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1U-Jo-jdP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OkH-i4-kag">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1LZ-4q-8RU">
+                                <rect key="frame" x="166" y="247" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="KU3-Bv-qnu"/>
+                    <connections>
+                        <outlet property="asdf" destination="1LZ-4q-8RU" id="nR2-he-WBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FIp-PP-fpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-917" y="-4"/>
+        </scene>
         <!--Tab Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -372,6 +403,7 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="sNB-He-qP6" kind="relationship" relationship="viewControllers" id="06g-CZ-qxg"/>
                         <segue destination="CL2-BU-mB6" kind="relationship" relationship="viewControllers" id="Mqq-Xr-mud"/>
+                        <segue destination="gBj-d2-lpU" kind="relationship" relationship="viewControllers" id="hQp-Ar-1En"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>

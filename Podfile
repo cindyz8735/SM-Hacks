@@ -8,6 +8,7 @@ target 'SM Hacks' do
   # Pods for SM Hacks
     pod ‘Firebase/Core’
     pod 'Firebase/Messaging'
+    pod ‘Firebase/RemoteConfig’
 
   target 'SM HacksTests' do
     inherit! :search_paths
