@@ -2,51 +2,52 @@
 //  ViewController.swift
 //  SM Hacks
 //
-//  Created by Cindy Zhang on 1/4/17.
+//  Created by Cindy Zhang on 1/5/17.
 //  Copyright © 2017 Cindy Zhang. All rights reserved.
 //
 
 import UIKit
-
-
-
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
     
-    let myNotification = Notification.Name(rawValue:"MyNotification")
+    
+    @IBOutlet var tblJSON: UITableView!
+    var arrRes = [[String:AnyObject]]() //Array of dictionary
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let nc = NotificationCenter.default
-        nc.addObserver(forName:myNotification, object:nil, queue:nil, using:catchNotification)
-    }
-    
-    @IBOutlet weak var asdf: UILabel!
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let nc = NotificationCenter.default
-        nc.post(name:myNotification,
-                object: nil,
-                userInfo:["message":"Hello there!", "date":Date()])
-    }
-    
-    func catchNotification(notification:Notification) -> Void {
-        print("Catch notification")
-        
-        guard let userInfo = notification.userInfo,
-            let message  = userInfo["message"] as? String,
-            let date     = userInfo["date"]    as? Date else {
-                print("No userInfo found in notification")
-                return
+        Alamofire.request("http://api.androidhive.info/contacts/").responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                
+                if let resData = swiftyJsonVar["contacts"].arrayObject {
+                    self.arrRes = resData as! [[String:AnyObject]]
+                }
+                if self.arrRes.count > 0 {
+                    self.tblJSON.reloadData()
+                }
+            }
         }
-        
-        let alert = UIAlertController(title: "Notification!",
-                                      message:"\(message) received at \(date)",
-            preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
-        
-        asdf.text = message
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "jsonCell")!
+        var dict = arrRes[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = dict["name"] as? String
+        cell.detailTextLabel?.text = dict["email"] as? String
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return arrRes.count
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
 }

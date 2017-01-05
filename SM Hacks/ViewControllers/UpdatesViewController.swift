@@ -18,8 +18,11 @@ class UpdatesViewController: UIViewController {
 
         // Do any additional setup after loading the view.
        
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:myNotification, object:nil, queue:nil, using:catchNotification)
+        
         // add push updates to array
-        updatesArray.append(newUpdate)
+        // updatesArray.append(newUpdate)
 
     }
 
@@ -27,6 +30,35 @@ class UpdatesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    let myNotification = Notification.Name(rawValue:"MyNotification")
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let nc = NotificationCenter.default
+        nc.post(name:myNotification,
+                object: nil,
+                userInfo:["message":"Hello there!", "date":Date()])
+    }
+    
+    func catchNotification(notification:Notification) -> Void {
+        print("Catch notification")
+        
+        guard let userInfo = notification.userInfo,
+            let message  = userInfo["message"] as? String,
+            let date     = userInfo["date"]    as? Date else {
+                print("No userInfo found in notification")
+                return
+        }
+        
+        let alert = UIAlertController(title: "Notification!",
+                                      message:"\(message) received at \(date)",
+            preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+
     
     // how many sections in table
     func numberOfSections(in tableView: UITableView) -> Int {

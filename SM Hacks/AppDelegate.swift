@@ -18,8 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
-    // var pushBody = [String]()
-    
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -84,6 +82,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
+        
+//        let bodyText  = userInfo["message"] as? String
+//        pushBody.append((bodyText?)!)
         
         // Print full message.
         print(userInfo)

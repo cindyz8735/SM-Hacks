@@ -9,6 +9,8 @@ target 'SM Hacks' do
     pod ‘Firebase/Core’
     pod 'Firebase/Messaging'
     pod ‘Firebase/RemoteConfig’
+    pod ‘Alamofire’
+    pod ‘SwiftyJSON’
 
   target 'SM HacksTests' do
     inherit! :search_paths
