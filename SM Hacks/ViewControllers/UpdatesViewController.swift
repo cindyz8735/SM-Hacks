@@ -27,7 +27,7 @@ class UpdatesViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
+        Alamofire.request("https://cindyz8735.github.io/sm-hacks-data/updates").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 
@@ -45,7 +45,7 @@ class UpdatesViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do some reloading of data and update the table view's data source
         // Fetch more objects from a web service, for example...
         
-        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
+        Alamofire.request("https://cindyz8735.github.io/sm-hacks-data/updates").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 
