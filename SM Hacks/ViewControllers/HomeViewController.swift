@@ -46,8 +46,23 @@ class HomeViewController: UIViewController {
     
     func timePrinter() -> Void {
         var time = timeCalculator(dateFormat: "MM/dd/yyyy hh:mm:ss a", endTime: "01/15/2017 12:00:00 p")
+        
         time.hour = (time.day!) * 24 + (time.hour!)
-        timerLabel.text = "\(time.hour!):\(time.minute!):\(time.second!)"
+        
+        var hourString = String(time.hour!)
+        var minuteString = String(time.minute!)
+        var secondString = String(time.second!)
+
+        if (time.hour!) < 10 {
+            hourString = "0" + hourString
+        }
+        if (time.minute!) < 10 {
+            minuteString = "0" + minuteString
+        }
+        if (time.second!) < 10 {
+            secondString = "0" + secondString
+        }
+        timerLabel.text = hourString + ":" + minuteString + ":" + secondString
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
