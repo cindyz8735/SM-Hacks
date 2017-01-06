@@ -62,6 +62,8 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.detailTextLabel?.text = sunTimeLoc
         }
         
+        cell.selectionStyle = .none
+        
         return cell
     }
     

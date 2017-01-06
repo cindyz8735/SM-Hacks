@@ -27,7 +27,7 @@ class UpdatesViewController: UIViewController {
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 
-                if let resData = swiftyJsonVar["contacts"].arrayObject {
+                if let resData = swiftyJsonVar["updates"].arrayObject {
                     self.updatesArray = resData as! [[String:AnyObject]]
                 }
                 if self.updatesArray.count > 0 {
@@ -41,8 +41,9 @@ class UpdatesViewController: UIViewController {
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
         let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "jsonCell")!
         var dict = updatesArray[(indexPath as NSIndexPath).row]
-        cell.textLabel?.text = dict["name"] as? String
-        cell.detailTextLabel?.text = dict["email"] as? String
+        cell.textLabel?.text = dict["title"] as? String
+        cell.detailTextLabel?.text = dict["name"] as? String
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -55,7 +56,7 @@ class UpdatesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
     /*
     // MARK: - Navigation
 
