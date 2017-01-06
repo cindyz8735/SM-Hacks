@@ -11,6 +11,11 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var timerLabel: UILabel!
+    @IBAction func tapSlackButton(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "https://goo.gl/aifJf2")! as URL)
+    }
+    
+    
     let formatter = DateFormatter()
     let userCalendar = Calendar.current;
     let requestedComponent : Set<Calendar.Component> = [
