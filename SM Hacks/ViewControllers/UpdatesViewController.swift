@@ -10,12 +10,11 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class UpdatesViewController: UIViewController {
+class UpdatesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet var jsonTable: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     var updatesArray = [[String:AnyObject]]()
-    
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -28,22 +27,24 @@ class UpdatesViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-//        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
-//            if((responseData.result.value) != nil) {
-//                let swiftyJsonVar = JSON(responseData.result.value!)
-//                
-//                if let resData = swiftyJsonVar["updates"].arrayObject {
-//                    self.updatesArray = resData as! [[String:AnyObject]]
-//                }
-//            }
-//        }
-        self.jsonTable.reloadData()
-        self.jsonTable.addSubview(self.refreshControl)
+        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                
+                if let resData = swiftyJsonVar["updates"].arrayObject {
+                    self.updatesArray = resData as! [[String:AnyObject]]
+                }
+                self.tableView.reloadData()
+            }
+        }
+        self.tableView.addSubview(self.refreshControl)
         
     }
     
     func handleRefresh(_ refreshControl: UIRefreshControl) {
-        // get data with alamofire and swiftyJSON
+        // Do some reloading of data and update the table view's data source
+        // Fetch more objects from a web service, for example...
+        
         Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
@@ -51,116 +52,36 @@ class UpdatesViewController: UIViewController {
                 if let resData = swiftyJsonVar["updates"].arrayObject {
                     self.updatesArray = resData as! [[String:AnyObject]]
                 }
+                //                self.jsonTable.reloadData()
             }
         }
         
-        // refresh stuff
-        self.jsonTable.reloadData()
+        self.tableView.reloadData()
         refreshControl.endRefreshing()
     }
     
-    // number of cells in table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return updatesArray.count
     }
     
-    // make table
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "jsonCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         
         var dict = updatesArray[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = dict["title"] as? String
         cell.detailTextLabel?.text = dict["body"] as? String
-        
-        return cell
-    }
-
-    
-    /*
-    
-    // Create array (dictionary)
-    var updatesArray = [[String:AnyObject]]()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
-        // Get data with Alamofire
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        getData()
-    }
-    
-    func getData() {
-        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
-            if((responseData.result.value) != nil) {
-                let swiftyJsonVar = JSON(responseData.result.value!)
                 
-                if let resData = swiftyJsonVar["updates"].arrayObject {
-                    self.updatesArray = resData as! [[String:AnyObject]]
-                }
-                self.jsonTable.reloadData()
-            }
-        }
-    }
-    
-    // Create Table
-    func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-//        updatesArray.removeAll()
-        
-        var newArray = updatesArray
-        updatesArray.removeAll()
-        var cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "jsonCell")!
-        
-        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
-            if((responseData.result.value) != nil) {
-                print("running alamo")
-                let swiftyJsonVar = JSON(responseData.result.value!)
-                
-                if let resData = swiftyJsonVar["updates"].arrayObject {
-                    newArray.removeAll()
-                    newArray = resData as! [[String:AnyObject]]
-                }
-            }
-            
-            if self.updatesArray.isEmpty{
-                print ("updatesArray empty")
-                if (newArray.isEmpty == false) {
-                    print("newarray NOT empty")
-                    var dict = newArray[(indexPath as NSIndexPath).row]
-                    cell.textLabel?.text = dict["title"] as? String
-                    cell.detailTextLabel?.text = dict["body"] as? String
-                }
-            }
-            else {
-                print ("updatesarray not empty")
-                var dict = newArray[(indexPath as NSIndexPath).row]
-                cell.textLabel?.text = dict["title"] as? String
-                cell.detailTextLabel?.text = dict["body"] as? String
-            }
-        }
-        // Format cell
-        cell.textLabel?.numberOfLines = 0
-        cell.detailTextLabel?.numberOfLines = 0
-        cell.selectionStyle = .none
-        
         return cell
     }
     
-    // Number of cells in table
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return updatesArray.count
-    }
-    
-    //    override func didReceiveMemoryWarning() {
-    //        super.didReceiveMemoryWarning()
-    //        // Dispose of any resources that can be recreated.
-    //    }
     
     /*
+     override func didReceiveMemoryWarning() {
+     super.didReceiveMemoryWarning()
+     // Dispose of any resources that can be recreated.
+     }
+     
+     
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -169,6 +90,5 @@ class UpdatesViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
- */
     
 }
