@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class UpdatesViewController: UIViewController {
-
+    
     @IBOutlet var jsonTable: UITableView!
     
     // Create array (dictionary)
@@ -19,10 +19,18 @@ class UpdatesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         // Get data with Alamofire
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
+    }
+    
+    func getData() {
         Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
@@ -30,20 +38,46 @@ class UpdatesViewController: UIViewController {
                 if let resData = swiftyJsonVar["updates"].arrayObject {
                     self.updatesArray = resData as! [[String:AnyObject]]
                 }
-                if self.updatesArray.count > 0 {
-                    self.jsonTable.reloadData()
-                }
+                self.jsonTable.reloadData()
             }
         }
     }
     
     // Create Table
     func tableView(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "jsonCell")!
-        var dict = updatesArray[(indexPath as NSIndexPath).row]
-        cell.textLabel?.text = dict["title"] as? String
-        cell.detailTextLabel?.text = dict["name"] as? String
+//        updatesArray.removeAll()
         
+        var newArray = updatesArray
+        updatesArray.removeAll()
+        var cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "jsonCell")!
+        
+        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                print("running alamo")
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                
+                if let resData = swiftyJsonVar["updates"].arrayObject {
+                    newArray.removeAll()
+                    newArray = resData as! [[String:AnyObject]]
+                }
+            }
+            
+            if self.updatesArray.isEmpty{
+                print ("updatesArray empty")
+                if (newArray.isEmpty == false) {
+                    print("newarray NOT empty")
+                    var dict = newArray[(indexPath as NSIndexPath).row]
+                    cell.textLabel?.text = dict["title"] as? String
+                    cell.detailTextLabel?.text = dict["name"] as? String
+                }
+            }
+            else {
+                print ("updatesarray not empty")
+                var dict = newArray[(indexPath as NSIndexPath).row]
+                cell.textLabel?.text = dict["title"] as? String
+                cell.detailTextLabel?.text = dict["name"] as? String
+            }
+        }
         // Format cell
         cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.numberOfLines = 0
@@ -56,20 +90,20 @@ class UpdatesViewController: UIViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return updatesArray.count
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    //    override func didReceiveMemoryWarning() {
+    //        super.didReceiveMemoryWarning()
+    //        // Dispose of any resources that can be recreated.
+    //    }
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
