@@ -43,7 +43,12 @@ class UpdatesViewController: UIViewController {
         var dict = updatesArray[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = dict["title"] as? String
         cell.detailTextLabel?.text = dict["name"] as? String
+        
+        // Format cell
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = 0
         cell.selectionStyle = .none
+        
         return cell
     }
     
