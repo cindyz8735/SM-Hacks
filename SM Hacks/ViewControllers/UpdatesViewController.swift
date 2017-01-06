@@ -14,6 +14,70 @@ class UpdatesViewController: UIViewController {
     
     @IBOutlet var jsonTable: UITableView!
     
+    var updatesArray = [[String:AnyObject]]()
+    
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(UpdatesViewController.handleRefresh(_:)), for: UIControlEvents.valueChanged)
+        
+        return refreshControl
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+//        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
+//            if((responseData.result.value) != nil) {
+//                let swiftyJsonVar = JSON(responseData.result.value!)
+//                
+//                if let resData = swiftyJsonVar["updates"].arrayObject {
+//                    self.updatesArray = resData as! [[String:AnyObject]]
+//                }
+//            }
+//        }
+        self.jsonTable.reloadData()
+        self.jsonTable.addSubview(self.refreshControl)
+        
+    }
+    
+    func handleRefresh(_ refreshControl: UIRefreshControl) {
+        // get data with alamofire and swiftyJSON
+        Alamofire.request("https://cindyz8735.github.io/ios-app/test-contacts").responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                
+                if let resData = swiftyJsonVar["updates"].arrayObject {
+                    self.updatesArray = resData as! [[String:AnyObject]]
+                }
+            }
+        }
+        
+        // refresh stuff
+        self.jsonTable.reloadData()
+        refreshControl.endRefreshing()
+    }
+    
+    // number of cells in table
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return updatesArray.count
+    }
+    
+    // make table
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "jsonCell")!
+        
+        var dict = updatesArray[(indexPath as NSIndexPath).row]
+        cell.textLabel?.text = dict["title"] as? String
+        cell.detailTextLabel?.text = dict["body"] as? String
+        
+        return cell
+    }
+
+    
+    /*
+    
     // Create array (dictionary)
     var updatesArray = [[String:AnyObject]]()
     
@@ -68,14 +132,14 @@ class UpdatesViewController: UIViewController {
                     print("newarray NOT empty")
                     var dict = newArray[(indexPath as NSIndexPath).row]
                     cell.textLabel?.text = dict["title"] as? String
-                    cell.detailTextLabel?.text = dict["name"] as? String
+                    cell.detailTextLabel?.text = dict["body"] as? String
                 }
             }
             else {
                 print ("updatesarray not empty")
                 var dict = newArray[(indexPath as NSIndexPath).row]
                 cell.textLabel?.text = dict["title"] as? String
-                cell.detailTextLabel?.text = dict["name"] as? String
+                cell.detailTextLabel?.text = dict["body"] as? String
             }
         }
         // Format cell
@@ -105,5 +169,6 @@ class UpdatesViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+ */
     
 }
