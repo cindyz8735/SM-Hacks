@@ -21,9 +21,11 @@
 		F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E4F1E1B707F00C6622D /* HomeViewController.swift */; };
 		F0229E521E1B708F00C6622D /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E511E1B708F00C6622D /* UpdatesViewController.swift */; };
 		F0229E541E1B709700C6622D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E531E1B709700C6622D /* MapViewController.swift */; };
+		F045A7DF1E1F59F100E2C0C7 /* floorplan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F045A7DE1E1F59F100E2C0C7 /* floorplan.jpg */; };
+		F045A7E11E1F620900E2C0C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E01E1F620900E2C0C7 /* MapKit.framework */; };
+		F045A7E31E1F627600E2C0C7 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */; };
 		F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A2323A1E1C39F7009F6A7B /* TabController.swift */; };
 		F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */; };
-		F0D682311E1BA20E00F0ADC6 /* MapScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */; };
 		F0EF02761E1DA2CD00C5CFBA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */; };
 		F0F08D821E1E409D002B589D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F08D811E1E409D002B589D /* Alamofire.framework */; };
 		F0F9553F1E1DC0BE00DFB739 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0F9553E1E1DC0BE00DFB739 /* GoogleService-Info.plist */; };
@@ -72,9 +74,11 @@
 		F0229E4F1E1B707F00C6622D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		F0229E511E1B708F00C6622D /* UpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdatesViewController.swift; path = ViewControllers/UpdatesViewController.swift; sourceTree = "<group>"; };
 		F0229E531E1B709700C6622D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
+		F045A7DE1E1F59F100E2C0C7 /* floorplan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floorplan.jpg; sourceTree = "<group>"; };
+		F045A7E01E1F620900E2C0C7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "../../../Library/Developer/Xcode/DerivedData/SM_Hacks-ddhstrwefdjnhzbsygdqjtuzktlm/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
 		F0A2323A1E1C39F7009F6A7B /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabController.swift; path = ViewControllers/TabController.swift; sourceTree = "<group>"; };
 		F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScheduleViewController.swift; path = ViewControllers/DetailScheduleViewController.swift; sourceTree = "<group>"; };
-		F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScrollView.swift; sourceTree = "<group>"; };
 		F0EF02731E1DA11400C5CFBA /* SM Hacks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SM Hacks.entitlements"; sourceTree = "<group>"; };
 		F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		F0F08D811E1E409D002B589D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/SM_Hacks-ddhstrwefdjnhzbsygdqjtuzktlm/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F045A7E31E1F627600E2C0C7 /* GoogleToolboxForMac.framework in Frameworks */,
+				F045A7E11E1F620900E2C0C7 /* MapKit.framework in Frameworks */,
 				F0F08D821E1E409D002B589D /* Alamofire.framework in Frameworks */,
 				F0EF02761E1DA2CD00C5CFBA /* UserNotifications.framework in Frameworks */,
 				68B5AE375C25FA93A0692BE5 /* Pods_SM_Hacks.framework in Frameworks */,
@@ -152,6 +158,7 @@
 			children = (
 				F0F9553E1E1DC0BE00DFB739 /* GoogleService-Info.plist */,
 				F0EF02731E1DA11400C5CFBA /* SM Hacks.entitlements */,
+				F045A7DE1E1F59F100E2C0C7 /* floorplan.jpg */,
 				F0071F751E1CE7E200148A72 /* floor-plan.png */,
 				F0229E4C1E1B705300C6622D /* ScheduleViewController.swift */,
 				F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */,
@@ -161,7 +168,6 @@
 				F0229E181E1B69FC00C6622D /* AppDelegate.swift */,
 				F0229E1E1E1B69FC00C6622D /* Main.storyboard */,
 				F0A2323A1E1C39F7009F6A7B /* TabController.swift */,
-				F0D682301E1BA20E00F0ADC6 /* MapScrollView.swift */,
 				F0229E211E1B69FC00C6622D /* Assets.xcassets */,
 				F0229E231E1B69FC00C6622D /* LaunchScreen.storyboard */,
 				F0229E261E1B69FC00C6622D /* Info.plist */,
@@ -190,6 +196,8 @@
 		F0EF02741E1DA2CD00C5CFBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */,
+				F045A7E01E1F620900E2C0C7 /* MapKit.framework */,
 				F0F08D811E1E409D002B589D /* Alamofire.framework */,
 				F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */,
 				DFCEFF0D56E2EEB64D97EB02 /* Pods_SM_Hacks.framework */,
@@ -282,6 +290,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -327,6 +338,7 @@
 				F0229E251E1B69FC00C6622D /* LaunchScreen.storyboard in Resources */,
 				F0229E221E1B69FC00C6622D /* Assets.xcassets in Resources */,
 				F0F9553F1E1DC0BE00DFB739 /* GoogleService-Info.plist in Resources */,
+				F045A7DF1E1F59F100E2C0C7 /* floorplan.jpg in Resources */,
 				F0229E201E1B69FC00C6622D /* Main.storyboard in Resources */,
 				F0071F761E1CE7E200148A72 /* floor-plan.png in Resources */,
 			);
@@ -497,7 +509,6 @@
 				F0229E4D1E1B705400C6622D /* ScheduleViewController.swift in Sources */,
 				F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */,
 				F0229E541E1B709700C6622D /* MapViewController.swift in Sources */,
-				F0D682311E1BA20E00F0ADC6 /* MapScrollView.swift in Sources */,
 				F0229E521E1B708F00C6622D /* UpdatesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -636,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

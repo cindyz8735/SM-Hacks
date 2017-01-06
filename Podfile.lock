@@ -33,6 +33,13 @@ PODS:
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - GoogleInterchangeUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
+  - GooglePlaces (2.1.1):
+    - GoogleMaps/Base (= 2.1.1)
   - GoogleSymbolUtilities (1.1.2)
   - GoogleToolboxForMac/Defines (2.1.0)
   - GoogleToolboxForMac/Logger (2.1.0):
@@ -46,6 +53,8 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
   - Firebase/RemoteConfig
+  - GoogleMaps
+  - GooglePlaces
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -57,10 +66,12 @@ SPEC CHECKSUMS:
   FirebaseMessaging: acf66347e43c5637c697060c3001d25c809a4131
   FirebaseRemoteConfig: 383a9afe0a9291ada949e3f615257928a823b594
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
+  GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: 9fecacbd88022505aab25ea68a6ed9e65810291c
+PODFILE CHECKSUM: 78f94bbd5d89cc26c03d8ada4a51a112f5de49ff
 
 COCOAPODS: 1.1.1

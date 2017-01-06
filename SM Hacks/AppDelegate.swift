@@ -13,6 +13,8 @@ import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
 
+import GoogleMaps
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -54,6 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                selector: #selector(self.tokenRefreshNotification),
                                                name: .firInstanceIDTokenRefresh,
                                                object: nil)
+        
+        // Google Maps stuff
+        GMSServices.provideAPIKey("AIzaSyBPfd3qhD7EhzyGHt4q9luZgQRwo0k7Hhk")
         
         return true
     }

@@ -11,6 +11,8 @@ target 'SM Hacks' do
     pod ‘Firebase/RemoteConfig’
     pod ‘Alamofire’
     pod ‘SwiftyJSON’
+    pod 'GoogleMaps'
+    pod ‘GooglePlaces’
 
   target 'SM HacksTests' do
     inherit! :search_paths
