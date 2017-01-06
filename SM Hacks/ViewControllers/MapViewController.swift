@@ -13,9 +13,7 @@ class MapViewController: UIViewController {
 
     var imageView: UIImageView!
     
-    @IBOutlet var scrollViewWindow: UIScrollView!
-    @IBOutlet var googleView: UIView!
-    
+    @IBOutlet var scrollViewWindow: UIScrollView!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +26,11 @@ class MapViewController: UIViewController {
         scrollViewWindow.addSubview(imageView)
         view.addSubview(scrollViewWindow)
     }
-    
-   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     
     /*
     // MARK: - Navigation
