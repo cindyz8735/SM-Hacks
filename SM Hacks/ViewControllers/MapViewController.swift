@@ -7,33 +7,29 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class MapViewController: UIViewController {
 
     var imageView: UIImageView!
     
     @IBOutlet var scrollViewWindow: UIScrollView!
+    @IBOutlet var googleView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView = UIImageView(image: UIImage(named: "floor-plan.png"))
+        imageView = UIImageView(image: UIImage(named: "floorplan.jpg"))
         
         imageView.contentMode = .scaleAspectFill
         imageView.isUserInteractionEnabled = true
 
-        scrollViewWindow.backgroundColor = UIColor.black
         scrollViewWindow.contentSize = imageView.bounds.size
         scrollViewWindow.addSubview(imageView)
         view.addSubview(scrollViewWindow)
     }
     
-    /*
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        print("Maps loaded")
-    }
-    */
+   
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
