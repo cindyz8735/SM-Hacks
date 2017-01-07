@@ -24,7 +24,6 @@
 		F045A7DF1E1F59F100E2C0C7 /* floorplan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F045A7DE1E1F59F100E2C0C7 /* floorplan.jpg */; };
 		F045A7E11E1F620900E2C0C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E01E1F620900E2C0C7 /* MapKit.framework */; };
 		F045A7E31E1F627600E2C0C7 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */; };
-		F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A2323A1E1C39F7009F6A7B /* TabController.swift */; };
 		F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */; };
 		F0EF02761E1DA2CD00C5CFBA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */; };
 		F0F08D821E1E409D002B589D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F08D811E1E409D002B589D /* Alamofire.framework */; };
@@ -77,7 +76,6 @@
 		F045A7DE1E1F59F100E2C0C7 /* floorplan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = floorplan.jpg; sourceTree = "<group>"; };
 		F045A7E01E1F620900E2C0C7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "../../../Library/Developer/Xcode/DerivedData/SM_Hacks-ddhstrwefdjnhzbsygdqjtuzktlm/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
-		F0A2323A1E1C39F7009F6A7B /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabController.swift; path = ViewControllers/TabController.swift; sourceTree = "<group>"; };
 		F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScheduleViewController.swift; path = ViewControllers/DetailScheduleViewController.swift; sourceTree = "<group>"; };
 		F0EF02731E1DA11400C5CFBA /* SM Hacks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SM Hacks.entitlements"; sourceTree = "<group>"; };
 		F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
@@ -167,7 +165,6 @@
 				F0229E531E1B709700C6622D /* MapViewController.swift */,
 				F0229E181E1B69FC00C6622D /* AppDelegate.swift */,
 				F0229E1E1E1B69FC00C6622D /* Main.storyboard */,
-				F0A2323A1E1C39F7009F6A7B /* TabController.swift */,
 				F0229E211E1B69FC00C6622D /* Assets.xcassets */,
 				F0229E231E1B69FC00C6622D /* LaunchScreen.storyboard */,
 				F0229E261E1B69FC00C6622D /* Info.plist */,
@@ -504,7 +501,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */,
-				F0A2323B1E1C39F7009F6A7B /* TabController.swift in Sources */,
 				F0229E191E1B69FC00C6622D /* AppDelegate.swift in Sources */,
 				F0229E4D1E1B705400C6622D /* ScheduleViewController.swift in Sources */,
 				F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */,

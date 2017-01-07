@@ -160,15 +160,20 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRh-59-jmj">
                                 <rect key="frame" x="0.0" y="449" width="375" height="89"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SM Hacks will be hosted at Informatica, 2100 Seaport Blvd., Redwood City, CA 94063." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnL-GV-l0z">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SM Hacks will be hosted at Informatica, 2100 Seaport Blvd., Redwood City, CA 94063." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="5" translatesAutoresizingMaskIntoConstraints="NO" id="tnL-GV-l0z">
                                         <rect key="frame" x="20" y="19" width="334" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="tnL-GV-l0z" firstAttribute="leading" secondItem="VRh-59-jmj" secondAttribute="leading" constant="20" id="HBo-Bw-GHn"/>
+                                    <constraint firstItem="tnL-GV-l0z" firstAttribute="top" secondItem="VRh-59-jmj" secondAttribute="top" constant="19" id="JqW-rQ-0yh"/>
+                                    <constraint firstAttribute="trailing" secondItem="tnL-GV-l0z" secondAttribute="trailing" constant="21" id="dQh-Gy-BIk"/>
+                                    <constraint firstAttribute="bottom" secondItem="tnL-GV-l0z" secondAttribute="bottom" constant="20" id="q7S-jE-zE8"/>
+                                </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l5Z-oD-D8f">
                                 <rect key="frame" x="0.0" y="85" width="375" height="293"/>
@@ -354,7 +359,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYa-Aj-Og5">
                                         <rect key="frame" x="0.0" y="50" width="335" height="254"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-jt-HVK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-jt-HVK">
                                                 <rect key="frame" x="21" y="25" width="293" height="204"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                                 <nil key="textColor"/>
@@ -414,12 +419,12 @@
                                     <constraint firstAttribute="trailing" secondItem="2cX-GO-gUp" secondAttribute="trailing" id="3vG-aW-Fwz"/>
                                     <constraint firstItem="2cX-GO-gUp" firstAttribute="leading" secondItem="HnJ-xY-DeP" secondAttribute="leading" id="57W-Ec-iaU"/>
                                     <constraint firstItem="2cX-GO-gUp" firstAttribute="centerY" secondItem="HnJ-xY-DeP" secondAttribute="centerY" id="GNA-Cl-4rR"/>
+                                    <constraint firstAttribute="height" constant="59" id="jVl-5r-LhR"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HnJ-xY-DeP" firstAttribute="top" secondItem="KiN-Cf-Ujr" secondAttribute="bottom" constant="41" id="4ja-Wm-4e4"/>
                             <constraint firstItem="i00-cS-lC6" firstAttribute="leading" secondItem="KR2-nZ-gUE" secondAttribute="leading" id="B7v-dB-Z4Z"/>
                             <constraint firstItem="i00-cS-lC6" firstAttribute="centerX" secondItem="KiN-Cf-Ujr" secondAttribute="centerX" id="D3d-lM-Fzv"/>
                             <constraint firstItem="i00-cS-lC6" firstAttribute="top" secondItem="ioe-wv-ZUd" secondAttribute="bottom" id="GHI-dC-ofD"/>
@@ -428,7 +433,6 @@
                             <constraint firstItem="LEV-0E-Rg3" firstAttribute="top" secondItem="HnJ-xY-DeP" secondAttribute="bottom" constant="50" id="QsL-GE-Lis"/>
                             <constraint firstItem="KiN-Cf-Ujr" firstAttribute="top" secondItem="i00-cS-lC6" secondAttribute="bottom" constant="50" id="TZp-Wc-TnE"/>
                             <constraint firstItem="KiN-Cf-Ujr" firstAttribute="leading" secondItem="KR2-nZ-gUE" secondAttribute="leadingMargin" constant="4" id="jNq-cV-R1D"/>
-                            <constraint firstItem="HnJ-xY-DeP" firstAttribute="top" secondItem="KR2-nZ-gUE" secondAttribute="top" constant="509" id="rCi-Ec-EFm"/>
                             <constraint firstAttribute="trailing" secondItem="i00-cS-lC6" secondAttribute="trailing" id="xRM-h8-70F"/>
                         </constraints>
                     </view>
