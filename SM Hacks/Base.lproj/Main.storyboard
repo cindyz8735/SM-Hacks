@@ -337,7 +337,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KiN-Cf-Ujr">
-                                <rect key="frame" x="20" y="114" width="335" height="354"/>
+                                <rect key="frame" x="20" y="114" width="335" height="355"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dk5-bk-nhE">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -357,10 +357,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYa-Aj-Og5">
-                                        <rect key="frame" x="0.0" y="50" width="335" height="254"/>
+                                        <rect key="frame" x="0.0" y="50" width="335" height="255"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-jt-HVK">
-                                                <rect key="frame" x="21" y="25" width="293" height="204"/>
+                                                <rect key="frame" x="21" y="25" width="293" height="205"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -375,7 +375,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIb-4S-O9Z">
-                                        <rect key="frame" x="0.0" y="304" width="335" height="50"/>
+                                        <rect key="frame" x="0.0" y="305" width="335" height="50"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hacks are due Sunday, January 15 at noon." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nW-iH-EGo">
                                                 <rect key="frame" x="0.0" y="33" width="335" height="17"/>
@@ -386,6 +386,8 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="3nW-iH-EGo" secondAttribute="bottom" id="25f-hK-eJi"/>
+                                            <constraint firstAttribute="height" constant="50" id="7fL-kQ-h60"/>
                                             <constraint firstItem="3nW-iH-EGo" firstAttribute="leading" secondItem="GIb-4S-O9Z" secondAttribute="leading" id="A8R-Mm-6c8"/>
                                             <constraint firstItem="3nW-iH-EGo" firstAttribute="centerY" secondItem="GIb-4S-O9Z" secondAttribute="centerY" constant="16.5" id="ni0-MR-cCW"/>
                                             <constraint firstAttribute="trailing" secondItem="3nW-iH-EGo" secondAttribute="trailing" id="oTg-3Y-xPm"/>
@@ -432,6 +434,7 @@
                             <constraint firstItem="KiN-Cf-Ujr" firstAttribute="leading" secondItem="HnJ-xY-DeP" secondAttribute="leading" id="IST-hH-sYv"/>
                             <constraint firstItem="LEV-0E-Rg3" firstAttribute="top" secondItem="HnJ-xY-DeP" secondAttribute="bottom" constant="50" id="QsL-GE-Lis"/>
                             <constraint firstItem="KiN-Cf-Ujr" firstAttribute="top" secondItem="i00-cS-lC6" secondAttribute="bottom" constant="50" id="TZp-Wc-TnE"/>
+                            <constraint firstItem="HnJ-xY-DeP" firstAttribute="top" secondItem="KiN-Cf-Ujr" secondAttribute="bottom" constant="40" id="acq-yn-XuN"/>
                             <constraint firstItem="KiN-Cf-Ujr" firstAttribute="leading" secondItem="KR2-nZ-gUE" secondAttribute="leadingMargin" constant="4" id="jNq-cV-R1D"/>
                             <constraint firstAttribute="trailing" secondItem="i00-cS-lC6" secondAttribute="trailing" id="xRM-h8-70F"/>
                         </constraints>
