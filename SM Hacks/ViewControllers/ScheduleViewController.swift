@@ -14,8 +14,7 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var tableView: UITableView!
     
-    var saturdayArray = [[String]]()
-    var satTime = [[String:AnyObject]]()
+    var saturdayArray = [[String:AnyObject]]()
     var sundayArray = [[String:AnyObject]]()
     
     lazy var refreshControl: UIRefreshControl = {
@@ -33,49 +32,31 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 
-                if let resData = swiftyJsonVar["schedule"].array {
-                    // self.saturdayArray = resData as! [[String:AnyObject]]
-                    
-                    for userDict in resData {
-                        var satEvent : String! = userDict["saturday"][0]["name"].string
-                        var satTime : String! = userDict["saturday"][0]["time"].string
-                        var sunEvent : String! = userDict["sunday"][0]["name"].string
-                        var sunTime : String! = userDict["sunday"][0]["time"].string
-                        
-                        var x : [String] = [satEvent, satTime]
-                        self.saturdayArray.append(x)
-                    }
-                    
+                if let resData = swiftyJsonVar["saturday"].arrayObject {
+                    self.saturdayArray = resData as! [[String:AnyObject]]
                 }
+//                if let resData = swiftyJsonVar["sunday"].arrayObject {
+//                    self.sundayArray = resData as! [[String:AnyObject]]
+//                }
+                self.tableView.reloadData()
             }
         }
-        
-        self.tableView.reloadData()
         self.tableView.addSubview(self.refreshControl)
     }
     
     // refresh
     func handleRefresh(_ refreshControl: UIRefreshControl) {
         // get data with alamofire and swiftyJSON
-        
         Alamofire.request("https://cindyz8735.github.io/sm-hacks-data/schedule").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
                 
-                if let resData = swiftyJsonVar["schedule"].array {
-                    // self.saturdayArray = resData as! [[String:AnyObject]]
-                    
-                    for userDict in resData {
-                        var satEvent : String! = userDict["saturday"][0]["name"].string
-                        var satTime : String! = userDict["saturday"][0]["time"].string
-                        var sunEvent : String! = userDict["sunday"][0]["name"].string
-                        var sunTime : String! = userDict["sunday"][0]["time"].string
-                        
-                        var x = [satEvent, satTime]
-                        self.saturdayArray.append(x as! [String])
-                    }
-                    
+                if let resData = swiftyJsonVar["saturday"].arrayObject {
+                    self.saturdayArray = resData as! [[String:AnyObject]]
                 }
+//                if let resData = swiftyJsonVar["sunday"].arrayObject {
+//                    self.sundayArray = resData as! [[String:AnyObject]]
+//                }
             }
         }
         
@@ -85,21 +66,20 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // how many sections in table
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     // number of cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("nnum cell func")
 
-        // if section == 0 {
+        if section == 0 {
             print (saturdayArray.count)
-            print (sundayArray.count)
             return saturdayArray.count
-        // }
-//        else {
-//            return sundayArray.count
-//        }
+        }
+        else {
+            return sundayArray.count
+        }
     }
     
     // make table
@@ -107,41 +87,33 @@ class ScheduleViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
         print("make table func")
         
-         var sat = saturdayArray[(indexPath as NSIndexPath).row]
-    
-//         var sun = sundayArray[(indexPath as NSIndexPath).row]
+        if indexPath.section == 0 {
+            var sat = saturdayArray[(indexPath as NSIndexPath).row]
+            cell.textLabel?.text = sat["name"] as? String
+            cell.detailTextLabel?.text = sat["time"] as? String
+        }
+        else {
+            var sun = sundayArray[(indexPath as NSIndexPath).row]
+            cell.textLabel?.text = sun["name"] as? String
+            cell.detailTextLabel?.text = sun["time"] as? String
+        }
         
         cell.textLabel?.numberOfLines = 0
         cell.detailTextLabel?.numberOfLines = 0
         cell.selectionStyle = .none
-
-         if indexPath.section == 0 {
-            for i in saturdayArray {
-                for j in i {
-                    print (j)
-                    // cell.textLabel?.text = j[0]
-                    // cell.detailTextLabel?.text = j[1]
-                    return cell
-                }
-            }
-        }
-//        else {
-//            cell.textLabel?.text = sun["name"] as? String
-//            cell.detailTextLabel?.text = sun["time"] as? String
-//        }
         
         return cell
     }
     
     // give section title
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        if section == 0 {
-//            return nil
-//        }
-//        else {
-//            return "Sunday, Jan. 15, 2017"
-//        }
-//    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return nil
+        }
+        else {
+            return "Sunday, Jan. 15, 2017"
+        }
+    }
 }
 
 /*
