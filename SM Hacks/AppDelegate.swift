@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
+    let gcmBody = "gcm.message_body"
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -56,10 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                selector: #selector(self.tokenRefreshNotification),
                                                name: .firInstanceIDTokenRefresh,
                                                object: nil)
-        
-        // Google Maps stuff
-        GMSServices.provideAPIKey("AIzaSyBPfd3qhD7EhzyGHt4q9luZgQRwo0k7Hhk")
-        
         return true
     }
     
