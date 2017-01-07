@@ -42,9 +42,6 @@ class UpdatesViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func handleRefresh(_ refreshControl: UIRefreshControl) {
-        // Do some reloading of data and update the table view's data source
-        // Fetch more objects from a web service, for example...
-        
         Alamofire.request("https://cindyz8735.github.io/sm-hacks-data/updates").responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil) {
                 let swiftyJsonVar = JSON(responseData.result.value!)
@@ -52,7 +49,6 @@ class UpdatesViewController: UIViewController, UITableViewDataSource, UITableVie
                 if let resData = swiftyJsonVar["updates"].arrayObject {
                     self.updatesArray = resData as! [[String:AnyObject]]
                 }
-                //                self.jsonTable.reloadData()
             }
         }
         
@@ -70,25 +66,12 @@ class UpdatesViewController: UIViewController, UITableViewDataSource, UITableVie
         var dict = updatesArray[(indexPath as NSIndexPath).row]
         cell.textLabel?.text = dict["title"] as? String
         cell.detailTextLabel?.text = dict["body"] as? String
+        
+        // format cells
+        cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = 0
+        cell.selectionStyle = .none
                 
         return cell
     }
-    
-    
-    /*
-     override func didReceiveMemoryWarning() {
-     super.didReceiveMemoryWarning()
-     // Dispose of any resources that can be recreated.
-     }
-     
-     
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
