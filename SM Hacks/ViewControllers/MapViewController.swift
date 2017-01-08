@@ -17,9 +17,10 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView = UIImageView(image: UIImage(named: "floorplan.jpg"))
         
-        imageView.contentMode = .scaleAspectFill
+        imageView = UIImageView(image: UIImage(named: "floorplan-copy.png"))
+        
+        imageView.contentMode = .scaleAspectFit
         imageView.isUserInteractionEnabled = true
 
         scrollViewWindow.contentSize = imageView.bounds.size
