@@ -13,14 +13,11 @@ import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
 
-import GoogleMaps
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
-    let gcmBody = "gcm.message_body"
     
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -157,9 +154,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("Disconnected from FCM.")
     }
     // [END disconnect_from_fcm]
-    
-    
-    
 }
 
 
