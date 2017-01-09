@@ -24,7 +24,6 @@
 		F045A7E31E1F627600E2C0C7 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */; };
 		F08602AA1E22307300E91C34 /* floorplan.png in Resources */ = {isa = PBXBuildFile; fileRef = F08602A91E22307300E91C34 /* floorplan.png */; };
 		F08602AC1E22329700E91C34 /* floorplan-copy.png in Resources */ = {isa = PBXBuildFile; fileRef = F08602AB1E22329700E91C34 /* floorplan-copy.png */; };
-		F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */; };
 		F0EF02761E1DA2CD00C5CFBA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */; };
 		F0F08D821E1E409D002B589D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0F08D811E1E409D002B589D /* Alamofire.framework */; };
 		F0F9553F1E1DC0BE00DFB739 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F0F9553E1E1DC0BE00DFB739 /* GoogleService-Info.plist */; };
@@ -76,7 +75,6 @@
 		F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "../../../Library/Developer/Xcode/DerivedData/SM_Hacks-ddhstrwefdjnhzbsygdqjtuzktlm/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
 		F08602A91E22307300E91C34 /* floorplan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = floorplan.png; path = ../../../../Desktop/floorplan.png; sourceTree = "<group>"; };
 		F08602AB1E22329700E91C34 /* floorplan-copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "floorplan-copy.png"; path = "../../../../Desktop/floorplan-copy.png"; sourceTree = "<group>"; };
-		F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailScheduleViewController.swift; path = ViewControllers/DetailScheduleViewController.swift; sourceTree = "<group>"; };
 		F0EF02731E1DA11400C5CFBA /* SM Hacks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SM Hacks.entitlements"; sourceTree = "<group>"; };
 		F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		F0F08D811E1E409D002B589D /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/SM_Hacks-ddhstrwefdjnhzbsygdqjtuzktlm/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 				F08602A91E22307300E91C34 /* floorplan.png */,
 				F08602AB1E22329700E91C34 /* floorplan-copy.png */,
 				F0229E4C1E1B705300C6622D /* ScheduleViewController.swift */,
-				F0CF2BAB1E1C5D9F0012245F /* DetailScheduleViewController.swift */,
 				F0229E4F1E1B707F00C6622D /* HomeViewController.swift */,
 				F0229E511E1B708F00C6622D /* UpdatesViewController.swift */,
 				F0229E531E1B709700C6622D /* MapViewController.swift */,
@@ -500,7 +497,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0CF2BAC1E1C5D9F0012245F /* DetailScheduleViewController.swift in Sources */,
 				F0229E191E1B69FC00C6622D /* AppDelegate.swift in Sources */,
 				F0229E4D1E1B705400C6622D /* ScheduleViewController.swift in Sources */,
 				F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */,

@@ -4,6 +4,7 @@
 //
 //  Created by Cindy Zhang on 1/2/17.
 //  Copyright © 2017 Cindy Zhang. All rights reserved.
+//  Home Tab Icon made by Iconnice from www.flaticon.com
 //
 
 import UIKit
