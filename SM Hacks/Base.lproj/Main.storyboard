@@ -28,7 +28,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" focusStyle="custom" textLabel="NkZ-3u-G8V" detailTextLabel="CP3-3u-Qs7" style="IBUITableViewCellStyleSubtitle" id="M10-dp-xJQ">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="56" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M10-dp-xJQ" id="mkN-85-XH2">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -222,7 +222,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" separatorStyle="default" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OZ7-FN-roV" userLabel="jsonTable">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OZ7-FN-roV" userLabel="jsonTable">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -339,7 +339,7 @@
                                         <rect key="frame" x="0.0" y="50" width="343" height="248"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-jt-HVK">
-                                                <rect key="frame" x="21" y="36" width="301" height="150"/>
+                                                <rect key="frame" x="21" y="49" width="301" height="150"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -347,9 +347,9 @@
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="Zhc-jt-HVK" firstAttribute="top" secondItem="rYa-Aj-Og5" secondAttribute="top" constant="36" id="5eT-Gh-vsM"/>
+                                            <constraint firstItem="Zhc-jt-HVK" firstAttribute="top" secondItem="rYa-Aj-Og5" secondAttribute="top" constant="49" id="5eT-Gh-vsM"/>
                                             <constraint firstItem="Zhc-jt-HVK" firstAttribute="centerX" secondItem="rYa-Aj-Og5" secondAttribute="centerX" id="Gfa-V0-Ebm"/>
-                                            <constraint firstAttribute="bottom" secondItem="Zhc-jt-HVK" secondAttribute="bottom" constant="62" id="IEf-Tq-Fwy"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zhc-jt-HVK" secondAttribute="bottom" constant="49" id="IEf-Tq-Fwy"/>
                                             <constraint firstItem="Zhc-jt-HVK" firstAttribute="leading" secondItem="rYa-Aj-Og5" secondAttribute="leading" constant="21" id="Rny-eH-IZ8"/>
                                         </constraints>
                                     </view>
@@ -375,7 +375,7 @@
                                         <rect key="frame" x="0.0" y="343" width="343" height="90"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DhF-jw-1qQ">
-                                                <rect key="frame" x="172" y="20" width="50" height="50"/>
+                                                <rect key="frame" x="171.5" y="20" width="50" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrb-X3-iF3">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -396,7 +396,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJ0-Lw-qYO">
-                                                <rect key="frame" x="230" y="20" width="50" height="50"/>
+                                                <rect key="frame" x="229.5" y="20" width="50" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsy-4G-zBt">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -417,7 +417,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Snz-PF-t9I">
-                                                <rect key="frame" x="114" y="20" width="50" height="50"/>
+                                                <rect key="frame" x="113.5" y="20" width="50" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhN-Xi-0Gb">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -438,7 +438,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZ1-Ph-Orw">
-                                                <rect key="frame" x="55" y="20" width="50" height="50"/>
+                                                <rect key="frame" x="54.5" y="20" width="50" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7c-BS-YjN">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
