@@ -417,7 +417,7 @@
                             <constraint firstAttribute="trailing" secondItem="i00-cS-lC6" secondAttribute="trailing" id="xRM-h8-70F"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Countdown" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="timerLabel" destination="Zhc-jt-HVK" id="UQ4-rZ-9co"/>
                     </connections>
@@ -450,7 +450,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Countdown" width="25" height="25"/>
+        <image name="Home" width="27" height="27"/>
         <image name="Logo" width="153" height="118"/>
         <image name="Map" width="25" height="25"/>
         <image name="Schedule" width="25" height="25"/>
