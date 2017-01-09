@@ -15,6 +15,15 @@ class HomeViewController: UIViewController {
     @IBAction func tapSlackButton(_ sender: Any) {
         UIApplication.shared.openURL(NSURL(string: "https://goo.gl/aifJf2")! as URL)
     }
+    @IBAction func tapFacebookButton(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "https://www.facebook.com/sanmateohacks/")! as URL)
+    }
+    @IBAction func tapTwitterButton(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "https://twitter.com/sanmateohacks")! as URL)
+    }
+    @IBAction func tapDevpostButton(_ sender: Any) {
+        UIApplication.shared.openURL(NSURL(string: "https://smhacks.devpost.com/")! as URL)
+    }
     
     
     let formatter = DateFormatter()

@@ -20,6 +20,10 @@
 		F0229E501E1B707F00C6622D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E4F1E1B707F00C6622D /* HomeViewController.swift */; };
 		F0229E521E1B708F00C6622D /* UpdatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E511E1B708F00C6622D /* UpdatesViewController.swift */; };
 		F0229E541E1B709700C6622D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0229E531E1B709700C6622D /* MapViewController.swift */; };
+		F03EF2A01E231EAA0034794D /* slack.png in Resources */ = {isa = PBXBuildFile; fileRef = F03EF29F1E231EAA0034794D /* slack.png */; };
+		F03EF2A21E231F020034794D /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = F03EF2A11E231F020034794D /* facebook.png */; };
+		F03EF2A41E231F050034794D /* devpost.png in Resources */ = {isa = PBXBuildFile; fileRef = F03EF2A31E231F050034794D /* devpost.png */; };
+		F03EF2A61E231F080034794D /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = F03EF2A51E231F080034794D /* twitter.png */; };
 		F045A7E11E1F620900E2C0C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E01E1F620900E2C0C7 /* MapKit.framework */; };
 		F045A7E31E1F627600E2C0C7 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */; };
 		F08602AA1E22307300E91C34 /* floorplan.png in Resources */ = {isa = PBXBuildFile; fileRef = F08602A91E22307300E91C34 /* floorplan.png */; };
@@ -71,6 +75,10 @@
 		F0229E4F1E1B707F00C6622D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ViewControllers/HomeViewController.swift; sourceTree = "<group>"; };
 		F0229E511E1B708F00C6622D /* UpdatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdatesViewController.swift; path = ViewControllers/UpdatesViewController.swift; sourceTree = "<group>"; };
 		F0229E531E1B709700C6622D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ViewControllers/MapViewController.swift; sourceTree = "<group>"; };
+		F03EF29F1E231EAA0034794D /* slack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slack.png; path = ../../../../Desktop/slack.png; sourceTree = "<group>"; };
+		F03EF2A11E231F020034794D /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = ../../../../Desktop/facebook.png; sourceTree = "<group>"; };
+		F03EF2A31E231F050034794D /* devpost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = devpost.png; path = ../../../../Desktop/devpost.png; sourceTree = "<group>"; };
+		F03EF2A51E231F080034794D /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitter.png; path = ../../../../Desktop/twitter.png; sourceTree = "<group>"; };
 		F045A7E01E1F620900E2C0C7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "../../../Library/Developer/Xcode/DerivedData/SM_Hacks-ddhstrwefdjnhzbsygdqjtuzktlm/Build/Products/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
 		F08602A91E22307300E91C34 /* floorplan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = floorplan.png; path = ../../../../Desktop/floorplan.png; sourceTree = "<group>"; };
@@ -154,6 +162,10 @@
 			children = (
 				F0F9553E1E1DC0BE00DFB739 /* GoogleService-Info.plist */,
 				F0EF02731E1DA11400C5CFBA /* SM Hacks.entitlements */,
+				F03EF29F1E231EAA0034794D /* slack.png */,
+				F03EF2A51E231F080034794D /* twitter.png */,
+				F03EF2A31E231F050034794D /* devpost.png */,
+				F03EF2A11E231F020034794D /* facebook.png */,
 				F08602A91E22307300E91C34 /* floorplan.png */,
 				F08602AB1E22329700E91C34 /* floorplan-copy.png */,
 				F0229E4C1E1B705300C6622D /* ScheduleViewController.swift */,
@@ -329,12 +341,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03EF2A01E231EAA0034794D /* slack.png in Resources */,
+				F03EF2A21E231F020034794D /* facebook.png in Resources */,
 				F08602AC1E22329700E91C34 /* floorplan-copy.png in Resources */,
 				F0229E251E1B69FC00C6622D /* LaunchScreen.storyboard in Resources */,
 				F0229E221E1B69FC00C6622D /* Assets.xcassets in Resources */,
 				F0F9553F1E1DC0BE00DFB739 /* GoogleService-Info.plist in Resources */,
 				F0229E201E1B69FC00C6622D /* Main.storyboard in Resources */,
+				F03EF2A61E231F080034794D /* twitter.png in Resources */,
 				F08602AA1E22307300E91C34 /* floorplan.png in Resources */,
+				F03EF2A41E231F050034794D /* devpost.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
