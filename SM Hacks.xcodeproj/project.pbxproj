@@ -24,8 +24,6 @@
 		F03EF2A21E231F020034794D /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = F03EF2A11E231F020034794D /* facebook.png */; };
 		F03EF2A41E231F050034794D /* devpost.png in Resources */ = {isa = PBXBuildFile; fileRef = F03EF2A31E231F050034794D /* devpost.png */; };
 		F03EF2A61E231F080034794D /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = F03EF2A51E231F080034794D /* twitter.png */; };
-		F045A7E11E1F620900E2C0C7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E01E1F620900E2C0C7 /* MapKit.framework */; };
-		F045A7E31E1F627600E2C0C7 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F045A7E21E1F627600E2C0C7 /* GoogleToolboxForMac.framework */; };
 		F08602AA1E22307300E91C34 /* floorplan.png in Resources */ = {isa = PBXBuildFile; fileRef = F08602A91E22307300E91C34 /* floorplan.png */; };
 		F08602AC1E22329700E91C34 /* floorplan-copy.png in Resources */ = {isa = PBXBuildFile; fileRef = F08602AB1E22329700E91C34 /* floorplan-copy.png */; };
 		F0EF02761E1DA2CD00C5CFBA /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0EF02751E1DA2CD00C5CFBA /* UserNotifications.framework */; };
@@ -95,8 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F045A7E31E1F627600E2C0C7 /* GoogleToolboxForMac.framework in Frameworks */,
-				F045A7E11E1F620900E2C0C7 /* MapKit.framework in Frameworks */,
 				F0F08D821E1E409D002B589D /* Alamofire.framework in Frameworks */,
 				F0EF02761E1DA2CD00C5CFBA /* UserNotifications.framework in Frameworks */,
 				68B5AE375C25FA93A0692BE5 /* Pods_SM_Hacks.framework in Frameworks */,
