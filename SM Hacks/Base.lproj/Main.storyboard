@@ -338,7 +338,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYa-Aj-Og5">
                                         <rect key="frame" x="0.0" y="50" width="343" height="248"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-jt-HVK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="50" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-jt-HVK">
                                                 <rect key="frame" x="21" y="36" width="301" height="150"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="60"/>
                                                 <nil key="textColor"/>
@@ -349,7 +349,7 @@
                                         <constraints>
                                             <constraint firstItem="Zhc-jt-HVK" firstAttribute="top" secondItem="rYa-Aj-Og5" secondAttribute="top" constant="36" id="5eT-Gh-vsM"/>
                                             <constraint firstItem="Zhc-jt-HVK" firstAttribute="centerX" secondItem="rYa-Aj-Og5" secondAttribute="centerX" id="Gfa-V0-Ebm"/>
-                                            <constraint firstAttribute="bottom" secondItem="Zhc-jt-HVK" secondAttribute="bottom" constant="37" id="IEf-Tq-Fwy"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zhc-jt-HVK" secondAttribute="bottom" constant="62" id="IEf-Tq-Fwy"/>
                                             <constraint firstItem="Zhc-jt-HVK" firstAttribute="leading" secondItem="rYa-Aj-Og5" secondAttribute="leading" constant="21" id="Rny-eH-IZ8"/>
                                         </constraints>
                                     </view>
